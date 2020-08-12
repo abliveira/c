@@ -63,9 +63,7 @@ int main() {
     printf("%s %s\n", curr_time, curr_date);
     printf("This is line %d\n", __LINE__);    
     std_c = __STDC__;
-    printf("STDC is %d", std_c);
-  
-  
+    printf("STDC is %d", std_c);  
   
   return 0;
 }
