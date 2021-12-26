@@ -23,6 +23,11 @@ the quality of the design by introducing loose coupling.
 - Identifying which modules to close and what changes to close them against requires experience and a good understanding 
 of the problem domain.
 
+Violation of the Open-Closed Principle#
+- By violating the single responsibility principle, a code would be hard to maintain. It is code that one never wants 
+to dig into in the future.
+- We cannot add new functionality without modifying existing code.
+
 Strategy is often a good approach when refactoring code duplication. You have multiple functions with very 
 similar responsibilities. Extracting the varied concepts allows us to reuse the general algorithm. We can 
 now represent each varied concept as a strategy passed to the general and reusable algorithm. This is true and 
