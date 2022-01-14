@@ -11,6 +11,7 @@
 int main() {
     
     // A função sizeof() retorna o tamanho ocupado por uma variável (inclusive vetores) em bytes
+    // Esta função na realidade é um operador, executado no momento da compilação e não durante o programa
     int x;
     int arr[10];
     printf("Tamanho de x (int) = %d bytes\n", sizeof(x)); /* output: 4 */
