@@ -6,7 +6,21 @@
 // São úteis para agrupar variáveis relacionadas entre si
 
 
-// Deve se criar a estrutura da struct antes do main
+// Ao criar uma struct declarando os seus membros e depois dando nome a ela, você cria uma variável tipo struct
+struct {
+    int day;
+    char month [10];
+    int year;
+} date;
+
+// Pode-se declarar múltiplas strucs de uma vez
+struct {
+    int day;
+    char month [10];
+    int year;
+} date1, date2, date3;
+
+// Ao criar uma struct dando nome a ela, você cria a struct como um tipo de variável, e deve ser declarado no main cada nova struct
 struct student {
     int age;
     int grade;
@@ -46,7 +60,14 @@ typedef struct {
 
 int main() {
     
-    // Pode-se declarar quantas structs quanto quiser:
+    // Pode-se acessar os membros da struct individualmente
+    date.day = 1;
+    sprintf(date.month, "January");
+    date.year = 2000;
+    
+    printf("Day: %d, Month: %s, Year: %d\n",  date.day, date.month, date.year);
+    
+    // Pode-se declarar quantas structs quanto quiser quando declarada como tipo:
     struct student s1;
     struct student s2;
     
