@@ -15,28 +15,30 @@
 // A diretiva #define também pode ser usada para operações de lógica if. O macro declarado equivale a 1, e não declarado equivale 0
 #define ABC
 #ifdef ABC
-// O código aqui será compilado
+  // O código aqui será compilado
 #elif BCD
-// O código aqui não será compilado
+  // O código aqui não será compilado
 #else
-// O código aqui não será compilado
+  // O código aqui não será compilado
 #endif
 
 // Ao contrário: "if not defined"
 #ifndef BCD
-// O código aqui será compilado
+  // O código aqui será compilado
 #else
-// O código aqui não será compilado
+  // O código aqui não será compilado
 #endif
 
-// Operações condifionais do pré processador também podem utilizar valores
+// Operações condicionais do pré processador também podem utilizar valores
 #define LEVEL 4
-#if LEVEL > 5
-// O código aqui não será compilado
+#if LEVEL == 3
+  // O código aqui não será compilado
+#elif LEVEL > 5
+  // O código aqui não será compilado
 #elif LEVEL > 4
-// O código aqui não será compilado
+  // O código aqui não será compilado
 #else
-// O código aqui será compilado
+  // O código aqui será compilado
 #endif
 
 // É possível pular a linha da diretiva e continuar na próxima, usando o operador "\"
@@ -46,14 +48,15 @@
 // É possível utilizar define com funções
 #define PI 3.14
 #define AREA(r) (PI*(r)*(r)) // Aqui o "r", trata-se do argumento onde a função será substituída. No caso, "radius" e "radius+1"
+
 int main() {
+
     float radius = 2;
     printf("%3.2f\n", PI);
     printf("Area is %5.2f\n", AREA(radius));
     printf("Area with radius + 1: %5.2f\n", AREA(radius+1));
   
-  
-  // Na linguagem C, também há macros já pré definidos que podem ser usados:
+    // Na linguagem C, também há macros já pré definidos que podem ser usados:
     char curr_time[10];
     char curr_date[12];
     int std_c;
