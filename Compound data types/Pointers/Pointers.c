@@ -32,8 +32,8 @@ int main (void) {
     int *ptr2 = NULL;
 
     // Pointer to Pointer Assignment in C
-    // We can use an assignment operator to assign value of a pointer to another
-    // pointer variable. But for such assignment, types of both the pointer should be same.
+    // Podemos usar um operador de atribuição para atribuir valor a um ponteiro a outro
+    // variável de ponteiro. Porém os tipos de ambos o ponteiro devem ser iguais.
 
     float b = 10;
 

@@ -13,14 +13,22 @@ Os ponteiros de função podem ser armazenados em uma matriz ou transmitidos com
 
 #include <stdio.h>
 
+// Exemplo
+void charFunc1(char *ptr) { // A função explicita que é um ponteiro sendo recebido
+    printf("\nThe String is : %s\n",ptr);
+}
+// Ambas funções são iguais
+void charFunc2(char ptr[]) { // Recebe um array (Que é ponteiro)
+    printf("The String is : %s\n",ptr);
+}
+
+// Exemplo
 int add (int x, int y) {
     return(x + y);
 }
-
 int subtract (int x, int y) {
     return(x - y);
 }
-
 int multiply (int x, int y) {
     return(x * y);
 }
@@ -107,8 +115,8 @@ int main (void) {
 
     for(int i = 0; i < 4; i++) {
         printf("Value of names[%d] = %s\n", i, names[i]);
-        // This statement is used for printing the complete name just using the
-        // pointer to the first character of each element of the names array.
+        // Esta declaração é usada para imprimir o nome completo apenas usando o
+        // ponteiro para o primeiro caractere de cada elemento da matriz de nomes
     }
 
 
@@ -127,24 +135,37 @@ int main (void) {
     Pointer and Character strings ---------------------------------------------
     Pointer is used to create strings. Pointer variables of char type are treated
     as string.
-
-    char *str = "Hello";
-    The above code creates a string and stores its address in the pointer variable
-    str. The pointer str now points to the first character of the string "Hello".
-
-    The string created using char pointer can be assigned a value at runtime.
-    char *str;
-    str = "hello";    
-    The content of the string can be printed using printf() and puts().
-    printf("%s", str);
-    puts(str);
-    str is a pointer to the string and also name of the string. Therefore we do not
-    need to use indirection operator *.
     */
+    
+    // A string criada usando o Pointer Char pode receber um valor em tempo de execução.
+    char *stringHi = "Hello";
+    // O código acima cria uma string e armazena seu endereço na variável ponteiro
+    // stringHi. O ponteiro stringHi agora aponta para o primeiro caracter da string "Hello".
+
+    // The content of the string can be printed using printf() and puts().
+    printf("\n%s\n", stringHi);
+    puts(stringHi);
+    // stringHi é um ponteiro para a string e também o nome da string. Portanto, não
+    // precisa usar o indirection operator *
+
+    /* 
+    Passing char arrays to functions ------------------------------------------
+
+    */
+
+    // https://dev-notes.eu/2019/07/Passing-Strings-in-C/
+    // https://c-for-dummies.com/blog/?p=4929
+
+    // Declare a buffer of type "char"
+	char buff[] = "Hello Function"; // "buff" já é um ponteiro para o primeiro caracter
+	
+	// Passa a string (valor de endereço)
+	charFunc1(buff);
+    charFunc2(buff);
 
 
     /*
-    Array of Pointers
+    Array of Pointers ---------------------------------------------------------
     Pointers are very helpful in handling character arrays with rows of varying lengths.
     Pointer with character array in c
     In the second approach memory wastage is more, hence it is preferred to use pointer in such cases.

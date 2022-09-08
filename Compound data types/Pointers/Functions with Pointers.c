@@ -4,15 +4,17 @@ Referências:
 
 Function pointers apontam para código executável para uma função na memória
 
-OBS:
-Maneiras seguras de devolver um ponteiro válido.
-- Use o argumento com funções.Como o argumento passado para as funções é declarado
- dentro da função de chamada, portanto, eles também viverão fora da função.
+Maneiras seguras de retornar um ponteiro válido.
+- Use o argumento utilizado pelas funções. Como o argumento passado para as
+ funções é declarado dentro da função de chamada, eles também viverão fora da função.
 - Ou use variáveis locais estáticas dentro da função e retorne -as.Como as variáveis
- estáticas têm uma vida útil até que a função principal () saia, elas estarão
+ estáticas têm uma vida útil até que a função main() saia, elas estarão
  disponíveis durante o programa.
 
+Obs: Passagem de arrays para funções em "Array Pointers.c"
+
 */
+
 
 #include <stdio.h>
 
