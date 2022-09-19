@@ -1,13 +1,29 @@
 /*
 
-Variable : Nothing but a name given to location that can hold our value.
-Static variable : Variable which preserve it's value even after it is out of it's scope. Once initialised, not initialised again.
-Regular variable : Regular or local variable. It's scope is limited to a function itself or can only be used in a function where it is declared.
-Global variable : Global variable is variable that is declared outside all functions. It's scope is throughout the program. It's value can be retrieved by all other functions.
-Volatile Variable : Their value can be changed by code outside the scope of current code at any time. The volatile keyword is intended to prevent the compiler from any optimization.
+- Variável: nada além de um nome dado ao local que pode conter um valor.
+- Variável local estática: variável que preserva seu valor, mesmo depois de estar
+fora de seu escopo. Uma vez inicializado, não é inicializada novamente.
+- Variável local regular: o escopo é limitado a uma função em si ou só pode ser
+usada em uma função onde é declarada. O valor não é mantido entre as chamadas da função.
+
+A principal diferença entre variável estática e normal é que a variável estática é
+inicializada apenas uma vez no programa e mantém seu valor, diferentemente do valor
+normal que é inicializado a cada vez.
+
+- Variável regular global: a variável global é variável que é declarada fora de todas
+as funções. Seu escopo está ao longo do programa, e pode ser acessada em arquivos
+externos se o seu arquivo de origem for incluso. Seu valor pode ser recuperado por
+todas as outras funções.
+- Variável ou função estática global: seu escopo é limitado ao seu arquivo de origem,
+mesmo incluindo o arquivo a que pertence,
+
+- Variável volátil: seu valor pode ser alterado por código fora do escopo do código
+atual a qualquer momento.A palavra -chave volátil destina -se a impedir que o compilador
+de qualquer otimização.
+
 */
 
-#include<stdio.h> 
+#include <stdio.h> 
 
 // int a, b = 10;
 
@@ -21,10 +37,7 @@ void func_1() {
 } 
 
 
-// The main difference between static and normal variable is that static variable is initialized only once in the program and retains it’s value, unlike the normal value that gets initialized every time.
-
-// Here is the example , it will help to clear it out
-void func() { 
+static void func() { // Função static Somente pode ser acessada neste próprio arquivo 
     static int static_var=1; 
     int non_static_var=1; 
  
@@ -45,7 +58,8 @@ of the variable can change without action from the visible code:
 - when there's another thread running that also uses the variable;
 - when there's a signal handler that might change the value of the variable.
 
-Let's say you have a little piece of hardware that is mapped into RAM somewhere and that has two addresses: a command port and a data port:
+Let's say you have a little piece of hardware that is mapped into RAM somewhere and that has
+ two addresses: a command port and a data port:
 */
 typedef struct
 {
