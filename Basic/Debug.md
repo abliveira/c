@@ -1,0 +1,15 @@
+### VS Code (Windows)
+- Instalar compilador com mingw:
+    - Instalar o instalador de pacotes mingw64 "ming get setup"
+    - Abrir o instalador de pacotes "mingw installation manager" 
+    - Selecionar pelo menos os pacotes "mingw32-base-bin" e "mingw32-gcc-g++-bin"
+- Associar a pasta dos binários instalados nas variáveis de sistema "Path"
+- No VS Code, instalar extensão C/C++ Intellisense
+- Abrir arquivo a ser depurado
+- Clicar em Configurações de Compilação no canto direito superior para gerar launch.json
+- Selecionar gcc.exe
+- Em launch.json realizar configurações necessárias, como "stopAtEntry": true, para habilitar uma breakline automatica no início de todos programas, "externalConsole": true para ver saída no console, e mudar  "miDebuggerPath": dependendo do local de instalação dos binários no computador atual. No arquivo tasks.json, também teria que mudar o caminho de "command":.
+- Reiniciar o depurador
+- Iniciar depuração com F5 ou sem depuração com ctrl+F5
+- É possível também adicional breakpoints condicionais, que vão parar o programa quando se depararem com a condição programada
+- É possível observar o valor das variáveis atuais, rastrear as variáveis e ver a pilha da stack
