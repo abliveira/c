@@ -53,7 +53,9 @@ int main() {
 
     printf("NAME: %s\n", ptr2->name);
     printf("AGE: %d\n", ptr2->age);
-    printf("ID: %d", ptr2->id);
+    printf("ID: %d\n", ptr2->id);
     
+    // Outra forma de acessar é usando parenteses mais o operador
+    printf("NAME: %s\n", (*ptr2).name);
     return 0;
 }
