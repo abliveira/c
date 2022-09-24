@@ -2,9 +2,9 @@
 
 /* fopen("file", ?)
 - r open for reading (file must exist)
-- w open for writing (file need not exist, or will be overwrited)
-- a open for append (file need not exist)
-- r+ open for reading and writing from beginning
+- w creates an empty file for writing. If a file with the same name already exists, its content is erased and the file is considered as a new empty file.
+- a appends to a file. Writing operations, append data at the end of the file. The file is created if it does not exist.
+- r+ open for reading and writing from beginning. The file must exist.
 - w+ open for reading and writing, overwriting file
 - a+ open for reading and writing, appending to file */
 
