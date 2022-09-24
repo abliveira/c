@@ -21,8 +21,8 @@ Obs: Passagem de arrays para funções em "Array Pointers.c"
 /*
 Ponteiros como argumento da função em c
 O parâmetro de ponteiro como função é usado para manter endereços de argumentos
- aprovados durante a chamada de função.Isso também é conhecido como chamado por
- referência.Quando uma função é chamada por referência, qualquer alteração feita
+ apontados durante a chamada de função. Isso também é conhecido como Call by Reference.
+ Quando uma função é chamada por referência, qualquer alteração feita
  na variável de referência afetará a variável original.
 Exemplo: Swapping two numbers using Pointer
 
