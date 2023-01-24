@@ -1,8 +1,9 @@
 ### VS Code (Windows)
-- Instalar compilador com mingw:
+- Instalar compilador com mingw-get-setup.exe:
     - Instalar o instalador de pacotes mingw64 "ming get setup"
     - Abrir o instalador de pacotes "mingw installation manager" 
     - Selecionar pelo menos os pacotes "mingw32-base-bin" e "mingw32-gcc-g++-bin"
+	- Aplicar alterações
 - Associar a pasta dos binários instalados nas variáveis de sistema "Path"
 - No VS Code, instalar extensão C/C++ Intellisense
 - Abrir arquivo a ser depurado
