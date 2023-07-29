@@ -30,6 +30,15 @@ int main (void) {
     x = 8; // reseta
     printf("%d\n", x++); // primeiro retorna, depois incrementa. logo imprime 8
     printf("%d\n", x); // imprime 9, pois x foi incrementado para 9
+    printf("\n");
+
+
+    // Operador Not (!)
+    // Poder ser usado para converter inteiros para 1, quando usado duas vezes:
+    int y = 10;
+    printf("y = %d\n", y); // y é convertido de 10 para 0
+    printf("y = %d\n", !y); // y é convertido de 10 para 0
+    printf("y = %d\n", !!y); // y é convertido de 10 para 0, e então, de 0 para 1
 
     return 0;
 }
