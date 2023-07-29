@@ -11,3 +11,9 @@
 ### Estudos
 
 [NeetCode](https://neetcode.io)
+
+### Ferramentas
+
+[Compiler Explorer](https://godbolt.org)
+
+[OnlineGDB](https://www.onlinegdb.com/online_c_compiler)
