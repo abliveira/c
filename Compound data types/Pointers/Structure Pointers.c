@@ -29,6 +29,11 @@ struct my_structure {
     int id;
 };
 
+// Exemplo 3
+void fun (int *ptr){ // Declara que recebe um ponteiro
+    *ptr = 2; // Altera o valor do ponteiro
+}
+
 
 int main() {
 
@@ -55,7 +60,14 @@ int main() {
     printf("AGE: %d\n", ptr2->age);
     printf("ID: %d\n", ptr2->id);
     
+    
     // Outra forma de acessar é usando parenteses mais o operador
     printf("NAME: %s\n", (*ptr2).name);
+    
+    // Exemplo 3
+    // Alterando membro enviando para função
+    fun(&ptr2->id); // Envia endereço
+    printf("New ID value: %d\n", ptr2->id);
+    
     return 0;
 }
