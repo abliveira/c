@@ -1,0 +1,1 @@
+`const` is demonstrated with pointers in the file: [Compound data types/Pointers/Const Pointers.c](../Compound%20data%20types/Pointers/Const%20Pointers.c).
